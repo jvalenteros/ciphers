@@ -51,8 +51,8 @@ open index.html
 ## Technologies Used
 
 - HTML5
-- Tailwind CSS 3.0
-- JavaScript (ES6+)
+- Tailwind CSS
+- JavaScript
 
 ## Development
 
