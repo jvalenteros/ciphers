@@ -26,7 +26,7 @@ A versatile web application for encoding and decoding text using various ciphers
 1. ROT13
 2. Caesar Cipher
 3. Vigenère Cipher
-(subject to change)
+4. More ciphers to be added!
 
 ## How to Use
 
