@@ -10,8 +10,7 @@ function processText() {
         showError('You must enter some text to encode/decode.');
         return;
     }
-    const output = rot13(input);
-    document.getElementById('output').textContent = output;
+    document.getElementById('output').textContent = rot13(input);
     updateWordCount('output');
     hideError();
 }
@@ -41,15 +40,15 @@ function hideError() {
     document.getElementById('errorMessage').classList.add('hidden');
 }
 
-// init clipboard.js
-var clipboard = new ClipboardJS('#copyButton');
+function copyToClipboard() {
+    const copiedText = document.getElementById('output').innerText;
+    navigator.clipboard.writeText(copiedText);
 
-clipboard.on('success', function(e) {
+    // Printing the message "Copied to clipboard!"
     const copyMessage = document.getElementById('copyMessage');
     copyMessage.classList.remove('hidden');
     setTimeout(() => copyMessage.classList.add('hidden'), 2000);
-    e.clearSelection();
-});
+}
 
 // event listeners
 document.getElementById('input').addEventListener('input', () => updateWordCount('input'));
