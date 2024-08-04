@@ -1,7 +1,6 @@
 # Ciphers Encoder/Decoder
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?logo=opensourceinitiative&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg?logo=git-lfs&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
