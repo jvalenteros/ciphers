@@ -1,4 +1,4 @@
-# Ciphers Encoder/Decoder
+# Cipher Tools
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?logo=opensourceinitiative&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
