@@ -18,24 +18,35 @@ function caesar(str, shift) {
 
 function processText() {
     const input = document.getElementById('input').value;
-    const shift = document.getElementById('shift').value;
-    let intShift = Number(shift); // Converts String 'shift' to a number.
+    const cipherType = document.getElementById('cipherType').value;
+    let output = '';
 
     if (input.trim() === '') {
         showError('You must enter some text to encode/decode.');
         return;
-    } else if (shift === '0') {
-        showError('Please enter a shift that is not zero.')
-        return;
-    } else if (shift < -26 || shift > 26) {
-        showError('Please enter a shift between -26 and 26.');
-        return;
-    } else if (shift === '' || isNaN(intShift)) {
-        showError('Please enter a valid shift.');
-        return;
     }
 
-    document.getElementById('output').textContent = caesar(input, intShift);
+    if (cipherType === 'caesar') {
+        const shift = document.getElementById('shift').value;
+        let intShift = Number(shift);
+
+        if (shift === '0') {
+            showError('Please enter a shift that is not zero.');
+            return;
+        } else if (shift < -25 || shift > 25) {
+            showError('Please enter a shift between -25 and 25.');
+            return;
+        } else if (shift === '' || isNaN(intShift)) {
+            showError('Please enter a valid shift.');
+            return;
+        }
+
+        output = caesar(input, intShift);
+    } else if (cipherType === 'rot13') {
+        output = rot13(input);
+    }
+
+    document.getElementById('output').textContent = output;
     updateWordCount('output');
     hideError();
 }
@@ -87,9 +98,35 @@ function copyToClipboard() {
     setTimeout(() => copyMessage.classList.add('hidden'), 2000);
 }
 
-// event listeners
-document.getElementById('input').addEventListener('input', () => updateWordCount('input'));
+function toggleShiftContainer() {
+    const cipherType = document.getElementById('cipherType').value;
+    const shiftContainer = document.getElementById('shiftContainer');
+    const cipherTypeContainer = document.getElementById('cipherType').parentNode;
+    
+    if (cipherType === 'caesar') {
+        shiftContainer.classList.remove('invisible');
+        shiftContainer.classList.remove('h-0', 'mb-0');
+        shiftContainer.classList.add('mb-4');
+        cipherTypeContainer.classList.remove('mb-6');
+        cipherTypeContainer.classList.add('mb-4');
+    } else {
+        shiftContainer.classList.add('invisible', 'h-0', 'mb-0');
+        shiftContainer.classList.remove('mb-4');
+        cipherTypeContainer.classList.remove('mb-4');
+        cipherTypeContainer.classList.add('mb-6');
+    }
+}
 
-// init word count update
-updateWordCount('input');
-updateWordCount('output');
+// event listeners
+// load html contents first before js runs
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('input').addEventListener('input', () => updateWordCount('input'));
+    document.getElementById('cipherType').addEventListener('change', toggleShiftContainer);
+
+    // init word count update
+    updateWordCount('input');
+    updateWordCount('output');
+
+    // init call to set correct visibility of shift container
+    toggleShiftContainer();
+});
