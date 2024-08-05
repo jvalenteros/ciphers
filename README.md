@@ -43,8 +43,8 @@ A versatile web application for encoding and decoding text using various ciphers
 No installation required, This is a web-based application. Simply clone the repository and open `index.html` in your web browser.
 
 ```bash
-git clone https://github.com/yourusername/ciphers-app.git
-cd ciphers-app
+git clone https://github.com/jvalenteros/ciphers.git
+cd ciphers
 open index.html
 ```
 
