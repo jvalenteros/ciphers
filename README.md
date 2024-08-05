@@ -74,7 +74,7 @@ Contributions, issues, and feature requests are always welcome, feel free to che
 
 ## License
 
-This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
+This project is available under the [MIT License.](https://github.com/jvalenteros/ciphers/blob/feature/LICENSE)
 
 ## Contributors
 
