@@ -1,0 +1,108 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color-scheme: light dark;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body {
+  background-color: #121212;
+  color: #e5e5e5;
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@layer components {
+  .note-container {
+    @apply max-w-2xl mx-auto px-4 py-8;
+  }
+  
+  .note-textarea {
+    @apply w-full border-0 shadow-none resize-none focus:ring-0 text-base leading-relaxed transition-colors duration-200;
+    min-height: 200px;
+  }
+  
+  .dark .note-textarea {
+    @apply bg-gray-800 text-white;
+  }
+  
+  .note-textarea:not(.dark .note-textarea) {
+    @apply bg-white text-gray-900;
+  }
+  
+  .note-card {
+    @apply rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .dark .note-card {
+    @apply bg-gray-800 border-gray-700;
+  }
+  
+  .note-card:not(.dark .note-card) {
+    @apply bg-white border border-gray-100;
+  }
+  
+  .note-button {
+    @apply px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200;
+  }
+  
+  .note-button-primary {
+    @apply text-white;
+  }
+  
+  .dark .note-button-primary {
+    @apply bg-blue-600 hover:bg-blue-700;
+  }
+  
+  .note-button-primary:not(.dark .note-button-primary) {
+    @apply bg-gray-900 hover:bg-gray-800;
+  }
+  
+  .note-button-secondary {
+    @apply text-gray-800;
+  }
+  
+  .dark .note-button-secondary {
+    @apply bg-gray-700 text-gray-200 hover:bg-gray-600;
+  }
+  
+  .note-button-secondary:not(.dark .note-button-secondary) {
+    @apply bg-gray-100 hover:bg-gray-200;
+  }
+}
