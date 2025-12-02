@@ -1,13 +1,13 @@
 # Ciphers Encoder/Decoder
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg?logo=opensourceinitiative&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)
+![React](https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%2338B2AC.svg?logo=tailwind-css&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/w/jvalenteros/ciphers/main)
 ![GitHub contributors](https://img.shields.io/github/contributors/jvalenteros/ciphers)
 
-A versatile web application for encoding and decoding text using various ciphers, built with HTML, JavaScript, and Tailwind CSS.
+A  web application for encoding and decoding text using various ciphers, built in React.
 
 ![Ciphers App Preview](preview.png)
 
@@ -17,8 +17,8 @@ A versatile web application for encoding and decoding text using various ciphers
 - 🔄 Encode and decode functionality for each cipher
 - 📊 Real-time character and word count
 - 📋 One-click copy to clipboard
-- 🎨 Clean and responsive user interface built with Tailwind CSS
-- ⚡ Fast and efficient processing with vanilla JavaScript
+- 🎨 Clean and responsive user interface built with React and Tailwind CSS
+- ⚡ Fast and efficient state management with React
 - 📱 Mobile-friendly design
 
 ## Supported Ciphers
@@ -38,39 +38,42 @@ A versatile web application for encoding and decoding text using various ciphers
 6. Use the "Copy" button to copy the result to your clipboard.
 7. Click "Clear" to reset both input and output fields.
 
-## Installation
+## Getting Started
 
-No installation required, This is a web-based application. Simply clone the repository and open `index.html` in your web browser.
+To get a local copy up and running, follow these simple steps.
 
-```bash
-git clone https://github.com/jvalenteros/ciphers.git
-cd ciphers
-open index.html
-```
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation & Usage
+
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/jvalenteros/ciphers.git
+   ```
+2. Change into the project directory:
+   ```sh
+   cd ciphers
+   ```
+3. Install NPM packages:
+   ```sh
+   npm install
+   ```
+4. Run the app in development mode. Open http://localhost:3000 to view it in your browser.
+   ```sh
+   npm start
+   ```
 
 ## Technologies Used
 
-- HTML5
+- React
 - Tailwind CSS
 - JavaScript
 
-## Development
-
-To modify the Tailwind CSS styles:
-
-1. Install dependencies:
-   ```
-   npm install
-   ```
-2. Run the Tailwind CLI build process:
-   ```
-   npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
-   ```
-3. Edit the HTML and JavaScript files as needed. The CSS will automatically update.
-
 ## Contributing
 
-Contributions, issues, and feature requests are always welcome, feel free to check [issues page](https://github.com/yourusername/ciphers-app/issues) if you want to contribute.
+Contributions, issues, and feature requests are always welcome. Feel free to check the issues page if you want to contribute.
 
 ## License
 
