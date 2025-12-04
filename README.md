@@ -9,8 +9,6 @@
 
 A  web application for encoding and decoding text using various ciphers, built in React.
 
-![Ciphers App Preview](preview.png)
-
 ## Features
 
 - 🔐 Support for multiple ciphers (ROT13, Caesar, Vigenère, etc.)
